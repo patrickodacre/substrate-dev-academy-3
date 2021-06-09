@@ -12,6 +12,11 @@ use frame_support::{
 use frame_system::ensure_signed;
 use sp_io::hashing::blake2_128;
 
+#[cfg(test)]
+mod mock;
+
+#[cfg(test)]
+mod tests;
 
 #[derive(Encode, Decode, Clone, RuntimeDebug, PartialEq, Eq)]
 pub enum KittyGender {
